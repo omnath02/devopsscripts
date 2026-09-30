@@ -22,6 +22,7 @@ df -h
 #STEP-4: Start and check the JENKINS Status
 systemctl start jenkins.service
 systemctl status jenkins.service
+#----------------------------------------------------------------------
 #CTRL+Q - Copy paste instace public IP in browser with port
 #cat /var/lib/jenkins/secrets/initialAdminPassword-->password---Install Suggested Plugins--un-amith pw-amith@123
 #STEP-5: Auto-Start Jenkins after server reboot
