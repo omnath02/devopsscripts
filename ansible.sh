@@ -10,7 +10,7 @@ dnf install python3 python3-pip -y
 python3 --version
 #ansible -m ping localhost
 
-#Step 2  set root password in master and host machines/ enable root login multi exec/
+#Step 2  set root password in master and host machines [enable root login multi exec]
 passwd root
 set new password: admin123
 ## enable all server to login as root
