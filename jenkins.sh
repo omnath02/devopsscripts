@@ -5,7 +5,7 @@
 #yum update -y
 #vi Jenkins.sh
 #--------------------------------------------------------------------
-##!/bin/bash
+#!/bin/bash
 #STEP-1: Installing Git and Maven
 yum install git maven -y
 git -v
