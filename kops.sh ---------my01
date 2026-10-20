@@ -89,11 +89,12 @@ chmod +x kops-setup.sh
 ./kops-setup.sh
 
 #wait for 15 min --- check infra created -----
+```bash
 kubectl get nodes
 kubectl get nodes -o wide
 kubectl get pods -A
 kops get cluster
-
+```
 #Delete the Kubernetes cluster and all AWS resources (EC2 instances, VPC, ELB, security groups):
 kops delete cluster --name reyaz.k8s.local --yes
 #Delete the S3 State Store bucket (since kops leaves the bucket behind by default):
