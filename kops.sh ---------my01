@@ -1,4 +1,4 @@
-EC2 - KOPS Management machine/ AL2023 OS/ IAM Role attached/ c7flex.large/ 
+EC2 - KOPS Management machine/ AL2023 OS/ IAM Role attached TE=EC2 Permissions=Admin/ c7flex.large/ 
 
 ec2-user
 sudo -s
@@ -88,13 +88,12 @@ chmod +x kops-setup.sh
 #Run the script:
 ./kops-setup.sh
 
-#wait for 15 min --- check infra created -----
-```bash
+#wait for 15 min --- check infra created ----- EC2 instances/S3 bucket/ Load Balancer/ VPC/ ASG
 kubectl get nodes
 kubectl get nodes -o wide
 kubectl get pods -A
 kops get cluster
-```
+
 #Delete the Kubernetes cluster and all AWS resources (EC2 instances, VPC, ELB, security groups):
 kops delete cluster --name reyaz.k8s.local --yes
 #Delete the S3 State Store bucket (since kops leaves the bucket behind by default):
